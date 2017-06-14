@@ -36,7 +36,7 @@ public class TinkerButtonBlock extends TranslatorBlock
 		{
 			String tkButtonName = "tkButton_" + translatorBlock.toCode();
 			translator.addDefinitionCommand("TKButton "+  tkButtonName + "(" + translatorBlock.toCode() + ");");
-			return tkButtonName + ".get()";
+			return tkButtonName + ".read()";
 		}
 		else
 		{
