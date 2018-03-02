@@ -2804,7 +2804,289 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<!-- Xinchejian -->
+		<!--************************************************************** CAROBOT SwissCHEESE ********************************************************************** --><BlockGenus name="Carobot_LED" kind="command" color="195 38 50" initlabel="bg.Carobot_LED">
+			<description>
+				<text>CAROBOT SwissCHEESE LED</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="Carobot_O0" label="O0" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
+					<DefaultArg genus-name="digital-on" label="ON" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/arduino/Carobot_LED.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus><BlockGenus name="Carobot_LED_pwm" kind="command" color="195 38 50" initlabel="bg.Carobot_LED_pwm">
+			<description>
+				<text>CAROBOT SwissCHEESE LED</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="Carobot_O0" label="O0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.level">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/arduino/Carobot_LED.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus><BlockGenus name="Carobot_Servo" kind="command" color="205 133 63" initlabel="bg.Carobot_Servo">
+			<description>
+				<text>CAROBOT SwissCHEESE Servo</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="Carobot_O0" label="O0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.angle">
+					<DefaultArg genus-name="number" label="90" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/arduino/Carobot_Servo.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus><BlockGenus name="Carobot_Button" kind="data" color="195 38 50" initlabel="bg.Carobot_Button">
+			<description>
+				<text>CAROBOT SwissCHEESE Button</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="Carobot_I0" label="I0" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/arduino/Carobot_Button.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus><BlockGenus name="Carobot_RotaryPotentiometer" kind="data" color="195 38 50" initlabel="bg.Carobot_RotaryPotentiometer">
+			<description>
+				<text>CAROBOT SwissCHEESE RotaryPotentiometer</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="Carobot_I0" label="I0" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/arduino/Carobot_RotaryPotentiometer.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus><BlockGenus name="Carobot_Tone" kind="command" color="195 38 50" initlabel="bg.Carobot_Tone">
+			<description>
+				<text>Generates a square wave of the specified frequency (and 50% duty cycle) on a pin.</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="Carobot_O0" label="O0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.frequency">
+					<DefaultArg genus-name="number" label="440" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/arduino/Carobot_Buzzer.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus><BlockGenus name="Carobot_NoTone" kind="command" color="195 38 50" initlabel="bg.Carobot_NoTone">
+			<description>
+				<text>Stops the generation of a square wave triggered by tone().</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="Carobot_O0" label="O0" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/arduino/Carobot_Buzzer.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus><BlockGenus name="Carobot_Ultrasonic" kind="data" color="195 38 50" initlabel="bg.Carobot_Ultrasonic">
+			<description>
+				<text>CAROBOT SwissCHEESE Ultrasonic</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" label="cm">
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="trigger #">
+					<DefaultArg genus-name="Carobot_I0" label="I0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="echo #">
+					<DefaultArg genus-name="Carobot_O0" label="O0" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/arduino/Carobot_Ultrasonic.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus><BlockGenus name="Carobot_Infrared" kind="data" color="195 38 50" initlabel="bg.Carobot_Infrared">
+			<description>
+				<text>CAROBOT SwissCHEESE Infrared</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug">
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="Carobot_I0" label="I0" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/arduino/Carobot_Infrared.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus><BlockGenus name="Carobot_LDR" kind="data" color="195 38 50" initlabel="bg.Carobot_LDR">
+			<description>
+				<text>CAROBOT SwissCHEESE LDR</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug">
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="Carobot_I0" label="I0" />
+				</BlockConnector></BlockConnectors></BlockGenus><BlockGenus name="Carobot_MotorBackward" kind="command" color="205 133 63" initlabel="bg.Carobot_MotorBackward">
+			<description>
+				<text>CAROBOT SwissCHEESE MotorBackward</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.motor_number">
+					<DefaultArg genus-name="Carobot_M1" label="M1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/arduino/Carobot_Motor.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus><BlockGenus name="Carobot_MotorForward" kind="command" color="205 133 63" initlabel="bg.Carobot_MotorForward">
+			<description>
+				<text>CAROBOT SwissCHEESE MotorForward</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.motor_number">
+					<DefaultArg genus-name="Carobot_M1" label="M1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/arduino/Carobot_Motor.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus><BlockGenus name="Carobot_MotorSpeed" kind="command" color="205 133 63" initlabel="bg.Carobot_MotorSpeed">
+			<description>
+				<text>CAROBOT SwissCHEESE MotorSpeed</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.motor_number">
+					<DefaultArg genus-name="Carobot_M1" label="M1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.speed_number">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/arduino/Carobot_Motor.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus><BlockGenus name="Carobot_MotorStop" kind="command" color="205 133 63" initlabel="bg.Carobot_MotorStop">
+			<description>
+				<text>CAROBOT SwissCHEESE MotorStop</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.motor_number">
+					<DefaultArg genus-name="Carobot_M1" label="M1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/arduino/Carobot_Motor.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus><BlockGenus name="Carobot_I0" kind="data" color="195 38 50" initlabel="bg.Carobot_I0" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus><BlockGenus name="Carobot_I1" kind="data" color="195 38 50" initlabel="bg.Carobot_I1" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus><BlockGenus name="Carobot_I2" kind="data" color="195 38 50" initlabel="bg.Carobot_I2" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus><BlockGenus name="Carobot_I3" kind="data" color="195 38 50" initlabel="bg.Carobot_I3" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus><BlockGenus name="Carobot_I4" kind="data" color="195 38 50" initlabel="bg.Carobot_I4" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus><BlockGenus name="Carobot_I5" kind="data" color="195 38 50" initlabel="bg.Carobot_I5" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus><BlockGenus name="Carobot_O0" kind="data" color="214 169 54" initlabel="bg.Carobot_O0" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus><BlockGenus name="Carobot_O1" kind="data" color="214 169 54" initlabel="bg.Carobot_O1" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus><BlockGenus name="Carobot_O2" kind="data" color="214 169 54" initlabel="bg.Carobot_O2" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus><BlockGenus name="Carobot_O3" kind="data" color="214 169 54" initlabel="bg.Carobot_O3" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus><BlockGenus name="Carobot_O4" kind="data" color="214 169 54" initlabel="bg.Carobot_O4" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus><BlockGenus name="Carobot_O5" kind="data" color="214 169 54" initlabel="bg.Carobot_O5" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus><BlockGenus name="Carobot_O6" kind="data" color="214 169 54" initlabel="bg.Carobot_O6" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" label="mirror">
+				</BlockConnector></BlockConnectors>
+		</BlockGenus><BlockGenus name="Carobot_O7" kind="data" color="214 169 54" initlabel="bg.Carobot_O7" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" label="mirror">
+				</BlockConnector></BlockConnectors>
+		</BlockGenus><BlockGenus name="Carobot_M1" kind="data" color="195 38 50" initlabel="bg.Carobot_M1" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug">
+					<DefaultArg genus-name="number" label="1" />
+				</BlockConnector></BlockConnectors>
+		</BlockGenus><BlockGenus name="Carobot_M2" kind="data" color="195 38 50" initlabel="bg.Carobot_M2" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug">
+					<DefaultArg genus-name="number" label="2">
+					</DefaultArg>
+				</BlockConnector></BlockConnectors>
+		</BlockGenus><!-- Xinchejian -->
 
 		<BlockGenus name="xcj_motor_forward" kind="command" color="0 255 0" initlabel="bg.xcj_motor_forward">
 			<description>
@@ -11197,6 +11479,21 @@
 				<BlockGenusMember>Tinker_Relay</BlockGenusMember>
 				<BlockGenusMember>Tinker_Mosfet</BlockGenusMember>
 				<BlockGenusMember>Tinker_Mosfet_pwm</BlockGenusMember>
+			</BlockDrawer><BlockDrawer button-color="195 38 50" name="bd.CAROBOT_SwissCHEESE" type="factory">
+				<BlockGenusMember>Carobot_LED</BlockGenusMember>
+				<BlockGenusMember>Carobot_LED_pwm</BlockGenusMember>
+				<BlockGenusMember>Carobot_Button</BlockGenusMember>
+				<BlockGenusMember>Carobot_RotaryPotentiometer</BlockGenusMember>
+				
+				<BlockGenusMember>Carobot_Tone</BlockGenusMember>
+				<BlockGenusMember>Carobot_NoTone</BlockGenusMember>
+				<BlockGenusMember>Carobot_Ultrasonic</BlockGenusMember>
+				<BlockGenusMember>Carobot_Infrared</BlockGenusMember>
+				<BlockGenusMember>Carobot_LDR</BlockGenusMember><BlockGenusMember>Carobot_Servo</BlockGenusMember><BlockGenusMember>Carobot_MotorBackward</BlockGenusMember>
+				<BlockGenusMember>Carobot_MotorForward</BlockGenusMember>
+				<BlockGenusMember>Carobot_MotorSpeed</BlockGenusMember>
+				<BlockGenusMember>Carobot_MotorStop</BlockGenusMember>
+				
 			</BlockDrawer>
 			<BlockDrawer button-color="255 102 0" name="bd.dfrobot" type="factory">
 			    <BlockGenusMember>df_led</BlockGenusMember>

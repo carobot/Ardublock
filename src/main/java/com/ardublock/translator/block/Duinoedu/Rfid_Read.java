@@ -1,4 +1,4 @@
-package com.ardublock.translator.block.Duinoedu;
+package com.ardublock.translator.block.duinoedu;
 
 import com.ardublock.translator.Translator;
 import com.ardublock.translator.block.TranslatorBlock;
