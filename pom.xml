@@ -4,11 +4,11 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-	<groupId>org.ardublock</groupId>
-	<artifactId>ardublock</artifactId>
+	<groupId>org.cardublock_edu</groupId>
+	<artifactId>cardublock_edu</artifactId>
 	<packaging>jar</packaging>
-	<version>0.1.0-SNAPSHOT</version>
-	<name>ArduBlock</name>
+	<version>0.2.0-SNAPSHOT</version>
+	<name>CarduBlock Edu</name>
 	<description>A Block Programming Language for Arduino</description>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -20,8 +20,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>2.3.2</version>
 				<configuration>
-					<source>1.5</source>
-					<target>1.5</target>
+					<source>1.6</source>
+					<target>1.6</target>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -138,5 +138,5 @@
 	      <scope>test</scope>
 	    </dependency>
 	</dependencies>
-	<url>http://ardublock.com/</url>
+	<url>http://www.carobot.org/resources</url>
 </project>
