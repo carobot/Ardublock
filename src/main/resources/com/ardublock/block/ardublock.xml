@@ -2924,10 +2924,10 @@
 				<BlockConnector connector-type="number" connector-kind="plug" label="cm">
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="trigger #">
-					<DefaultArg genus-name="Carobot_I0" label="I0" />
+					<DefaultArg genus-name="Carobot_O0" label="O0" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="echo #">
-					<DefaultArg genus-name="Carobot_O0" label="O0" />
+					<DefaultArg genus-name="Carobot_I0" label="I0" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
