@@ -2455,7 +2455,7 @@
 		
 		
 		
-		<!--************************************************************** CAROBOT SwissCHEESE! ********************************************************************** -->
+		<!--************************************************************** CAROBOT SwissCHEESE ********************************************************************** -->
 		<BlockGenus name="Carobot_LED" kind="command" color="195 38 50" initlabel="bg.Carobot_LED">
 			<description>
 				<text>CAROBOT SwissCHEESE LED</text>
@@ -2595,11 +2595,11 @@
 				</BlockConnector>
 				<BlockConnector connector-type="number"
 					connector-kind="socket" label="trigger #">
-					<DefaultArg genus-name="Carobot_I0" label="I0" />
+					<DefaultArg genus-name="Carobot_O0" label="O0" />
 				</BlockConnector>
 				<BlockConnector connector-type="number"
 					connector-kind="socket" label="echo #">
-					<DefaultArg genus-name="Carobot_O0" label="O0" />
+					<DefaultArg genus-name="Carobot_I0" label="I0" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
