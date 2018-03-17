@@ -2818,7 +2818,7 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/arduino/Carobot_LED.png</FileLocation>
+					<FileLocation>com/ardublock/block/carobot/Carobot_LED.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus><BlockGenus name="Carobot_LED_pwm" kind="command" color="195 38 50" initlabel="bg.Carobot_LED_pwm">
@@ -2835,7 +2835,7 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/arduino/Carobot_LED.png</FileLocation>
+					<FileLocation>com/ardublock/block/carobot/Carobot_LED.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus><BlockGenus name="Carobot_Servo" kind="command" color="205 133 63" initlabel="bg.Carobot_Servo">
@@ -2850,11 +2850,6 @@
 					<DefaultArg genus-name="number" label="90" />
 				</BlockConnector>
 			</BlockConnectors>
-			<Images>
-				<Image>
-					<FileLocation>com/ardublock/block/arduino/Carobot_Servo.png</FileLocation>
-				</Image>
-			</Images>
 		</BlockGenus><BlockGenus name="Carobot_Button" kind="data" color="195 38 50" initlabel="bg.Carobot_Button">
 			<description>
 				<text>CAROBOT SwissCHEESE Button</text>
@@ -2867,7 +2862,7 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/arduino/Carobot_Button.png</FileLocation>
+					<FileLocation>com/ardublock/block/carobot/Carobot_Button.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus><BlockGenus name="Carobot_RotaryPotentiometer" kind="data" color="195 38 50" initlabel="bg.Carobot_RotaryPotentiometer">
@@ -2882,7 +2877,7 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/arduino/Carobot_RotaryPotentiometer.png</FileLocation>
+					<FileLocation>com/ardublock/block/carobot/Carobot_RotaryPotentiometer.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus><BlockGenus name="Carobot_Tone" kind="command" color="195 38 50" initlabel="bg.Carobot_Tone">
@@ -2899,7 +2894,7 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/arduino/Carobot_Buzzer.png</FileLocation>
+					<FileLocation>com/ardublock/block/carobot/Carobot_Buzzer.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus><BlockGenus name="Carobot_NoTone" kind="command" color="195 38 50" initlabel="bg.Carobot_NoTone">
@@ -2913,7 +2908,7 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/arduino/Carobot_Buzzer.png</FileLocation>
+					<FileLocation>com/ardublock/block/carobot/Carobot_Buzzer.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus><BlockGenus name="Carobot_Ultrasonic" kind="data" color="195 38 50" initlabel="bg.Carobot_Ultrasonic">
@@ -2932,7 +2927,7 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/arduino/Carobot_Ultrasonic.png</FileLocation>
+					<FileLocation>com/ardublock/block/carobot/Carobot_Ultrasonic.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus><BlockGenus name="Carobot_Infrared" kind="data" color="195 38 50" initlabel="bg.Carobot_Infrared">
@@ -2948,7 +2943,7 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/arduino/Carobot_Infrared.png</FileLocation>
+					<FileLocation>com/ardublock/block/carobot/Carobot_Infrared.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus><BlockGenus name="Carobot_LDR" kind="data" color="195 38 50" initlabel="bg.Carobot_LDR">
@@ -2960,7 +2955,12 @@
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="Carobot_I0" label="I0" />
-				</BlockConnector></BlockConnectors></BlockGenus><BlockGenus name="Carobot_MotorBackward" kind="command" color="205 133 63" initlabel="bg.Carobot_MotorBackward">
+				</BlockConnector></BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/carobot/Carobot_LDR.png</FileLocation>
+				</Image>
+			</Images></BlockGenus><BlockGenus name="Carobot_MotorBackward" kind="command" color="205 133 63" initlabel="bg.Carobot_MotorBackward">
 			<description>
 				<text>CAROBOT SwissCHEESE MotorBackward</text>
 			</description>
@@ -2971,7 +2971,7 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/arduino/Carobot_Motor.png</FileLocation>
+					<FileLocation>com/ardublock/block/carobot/Carobot_Motor.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus><BlockGenus name="Carobot_MotorForward" kind="command" color="205 133 63" initlabel="bg.Carobot_MotorForward">
@@ -2985,7 +2985,7 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/arduino/Carobot_Motor.png</FileLocation>
+					<FileLocation>com/ardublock/block/carobot/Carobot_Motor.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus><BlockGenus name="Carobot_MotorSpeed" kind="command" color="205 133 63" initlabel="bg.Carobot_MotorSpeed">
@@ -3002,7 +3002,7 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/arduino/Carobot_Motor.png</FileLocation>
+					<FileLocation>com/ardublock/block/carobot/Carobot_Motor.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus><BlockGenus name="Carobot_MotorStop" kind="command" color="205 133 63" initlabel="bg.Carobot_MotorStop">
@@ -3016,7 +3016,7 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/arduino/Carobot_Motor.png</FileLocation>
+					<FileLocation>com/ardublock/block/carobot/Carobot_Motor.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus><BlockGenus name="Carobot_I0" kind="data" color="195 38 50" initlabel="bg.Carobot_I0" editable-label="no">
