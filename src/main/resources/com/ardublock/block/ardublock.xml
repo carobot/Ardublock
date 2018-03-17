@@ -2470,7 +2470,7 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/arduino/Carobot_LED.png</FileLocation>
+					<FileLocation>com/ardublock/block/carobot/Carobot_LED.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -2489,7 +2489,7 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/arduino/Carobot_LED.png</FileLocation>
+					<FileLocation>com/ardublock/block/carobot/Carobot_LED.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -2508,7 +2508,7 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/arduino/Carobot_Servo.png</FileLocation>
+					<FileLocation>com/ardublock/block/carobot/Carobot_Servo.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -2525,7 +2525,7 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/arduino/Carobot_Button.png</FileLocation>
+					<FileLocation>com/ardublock/block/carobot/Carobot_Button.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -2542,7 +2542,7 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/arduino/Carobot_RotaryPotentiometer.png</FileLocation>
+					<FileLocation>com/ardublock/block/carobot/Carobot_RotaryPotentiometer.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -2563,7 +2563,7 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/arduino/Carobot_Buzzer.png</FileLocation>
+					<FileLocation>com/ardublock/block/carobot/Carobot_Buzzer.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -2580,7 +2580,7 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/arduino/Carobot_Buzzer.png</FileLocation>
+					<FileLocation>com/ardublock/block/carobot/Carobot_Buzzer.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -2604,7 +2604,7 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/arduino/Carobot_Ultrasonic.png</FileLocation>
+					<FileLocation>com/ardublock/block/carobot/Carobot_Ultrasonic.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -2624,7 +2624,7 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/arduino/Carobot_Infrared.png</FileLocation>
+					<FileLocation>com/ardublock/block/carobot/Carobot_Infrared.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -2639,7 +2639,12 @@
 				<BlockConnector connector-type="number"
 					connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="Carobot_I0" label="I0" />
-				</BlockConnector></BlockConnectors></BlockGenus>
+				</BlockConnector></BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/carobot/Carobot_LDR.png</FileLocation>
+				</Image>
+			</Images></BlockGenus>
 
 		<BlockGenus name="Carobot_MotorBackward" kind="command" color="205 133 63" initlabel="bg.Carobot_MotorBackward">
 			<description>
@@ -2653,7 +2658,7 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/arduino/Carobot_Motor.png</FileLocation>
+					<FileLocation>com/ardublock/block/carobot/Carobot_Motor.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -2670,7 +2675,7 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/arduino/Carobot_Motor.png</FileLocation>
+					<FileLocation>com/ardublock/block/carobot/Carobot_Motor.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -2691,7 +2696,7 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/arduino/Carobot_Motor.png</FileLocation>
+					<FileLocation>com/ardublock/block/carobot/Carobot_Motor.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -2708,7 +2713,7 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/arduino/Carobot_Motor.png</FileLocation>
+					<FileLocation>com/ardublock/block/carobot/Carobot_Motor.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
