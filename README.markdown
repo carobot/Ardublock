@@ -1,6 +1,6 @@
 CarduBlock
 ======
-An Ardublock fork with various updates including CaRobot.org's SWISS Cheese board.
+An Ardublock fork with various updates including CARobot.org's SWISS Cheese board.
 
 Development
 ----
