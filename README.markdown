@@ -1,3 +1,22 @@
+CarduBlock
+======
+An Ardublock fork with various updates including CaRobot.org's SWISS Cheese board.
+
+Development
+----
+For MacOS
+    
+    brew install maven
+    run install_openblocks
+    mvn validate
+    mvn install
+    copy all.jar into Arduino/tools/CardublockTool/tool
+
+For Windows
+    
+    coming soon
+
+
 ArduBlock
 ======
 
