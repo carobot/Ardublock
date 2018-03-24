@@ -21,17 +21,17 @@ import com.ardublock.core.Context;
 import com.ardublock.ui.ArduBlockToolFrame;
 import com.ardublock.ui.listener.OpenblocksFrameListener;
 
-public class ArduBlockTool implements Tool, OpenblocksFrameListener
+public class CarduBlockTool implements Tool, OpenblocksFrameListener
 {
 	static Editor editor;
 	static ArduBlockToolFrame openblocksFrame;
 	
 	public void init(Editor editor) {
-		if (ArduBlockTool.editor == null )
+		if (CarduBlockTool.editor == null )
 		{
-			ArduBlockTool.editor = editor;
-			ArduBlockTool.openblocksFrame = new ArduBlockToolFrame();
-			ArduBlockTool.openblocksFrame.addListener(this);
+			CarduBlockTool.editor = editor;
+			CarduBlockTool.openblocksFrame = new ArduBlockToolFrame();
+			CarduBlockTool.openblocksFrame.addListener(this);
 			Context context = Context.getContext();
 			String arduinoVersion = this.getArduinoVersion();
 			context.setInArduino(true);
@@ -43,9 +43,9 @@ public class ArduBlockTool implements Tool, OpenblocksFrameListener
 
 	public void run() {
 		try {
-			ArduBlockTool.editor.toFront();
-			ArduBlockTool.openblocksFrame.setVisible(true);
-			ArduBlockTool.openblocksFrame.toFront();
+			CarduBlockTool.editor.toFront();
+			CarduBlockTool.openblocksFrame.setVisible(true);
+			CarduBlockTool.openblocksFrame.toFront();
 		} catch (Exception e) {
 			
 		}
@@ -74,26 +74,26 @@ public class ArduBlockTool implements Tool, OpenblocksFrameListener
 	}
 	
 	public void didGenerate(String source) {
-		//ArduBlockTool.editor.setText(source);
+		//CarduBlockTool.editor.setText(source);
 		java.lang.reflect.Method method;
 		try {
 			// pre Arduino 1.6.12
-			Class ed = ArduBlockTool.editor.getClass();
+			Class ed = CarduBlockTool.editor.getClass();
 			Class[] cArg = new Class[1];
 			cArg[0] = String.class;
 			method = ed.getMethod("setText", cArg);
-			method.invoke(ArduBlockTool.editor, source);
+			method.invoke(CarduBlockTool.editor, source);
 		}
 		catch (NoSuchMethodException e) {
-			ArduBlockTool.editor.getCurrentTab().setText(source);
+			CarduBlockTool.editor.getCurrentTab().setText(source);
 		} catch (IllegalAccessException e) {
-			ArduBlockTool.editor.getCurrentTab().setText(source);
+			CarduBlockTool.editor.getCurrentTab().setText(source);
 		} catch (SecurityException e) {
-			ArduBlockTool.editor.getCurrentTab().setText(source);
+			CarduBlockTool.editor.getCurrentTab().setText(source);
 		} catch (InvocationTargetException e) {
-			ArduBlockTool.editor.getCurrentTab().setText(source);
+			CarduBlockTool.editor.getCurrentTab().setText(source);
 		}
-		ArduBlockTool.editor.handleExport(false);
+		CarduBlockTool.editor.handleExport(false);
 	}
 	
 	private String getArduinoVersion()
