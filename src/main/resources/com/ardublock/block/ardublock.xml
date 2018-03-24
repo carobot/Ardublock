@@ -2568,6 +2568,29 @@
 			</Images>
 		</BlockGenus>
 
+		<BlockGenus name="Carobot_ToneTime" kind="command" color="195 38 50" initlabel="bg.Carobot_ToneTime">
+			<description>
+				<text>Generates a square wave of the specified frequency (and 50% duty cycle) on a pin.</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="Carobot_O0" label="O0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number"
+					connector-kind="socket" label="bc.frequency">
+					<DefaultArg genus-name="number" label="440" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket"
+					label="bc.milliseconds">
+					<DefaultArg genus-name="number" label="1000" />
+				</BlockConnector></BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/carobot/Carobot_Buzzer.png</FileLocation>
+				</Image>
+			</Images></BlockGenus>
+
 		<BlockGenus name="Carobot_NoTone" kind="command" color="195 38 50" initlabel="bg.Carobot_NoTone">
 			<description>
 				<text>Stops the generation of a square wave triggered by tone().</text>
@@ -11146,6 +11169,7 @@
 				<BlockGenusMember>Carobot_RotaryPotentiometer</BlockGenusMember>
 				
 				<BlockGenusMember>Carobot_Tone</BlockGenusMember>
+				<BlockGenusMember>Carobot_ToneTime</BlockGenusMember>
 				<BlockGenusMember>Carobot_NoTone</BlockGenusMember>
 				<BlockGenusMember>Carobot_Ultrasonic</BlockGenusMember>
 				<BlockGenusMember>Carobot_Infrared</BlockGenusMember>
