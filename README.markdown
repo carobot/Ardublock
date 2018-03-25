@@ -1,20 +1,32 @@
-CarduBlock
+CarduBlock EDU
 ======
-An Ardublock fork with various updates including CARobot.org's SWISS Cheese board.
+A lightweight ArduBlock fork with various updates including blocks for the CAROBOT SwissCHEESE board.
 
-Development
+Installation
 ----
-For MacOS
-    
-    brew install maven
-    run install_openblocks
-    mvn validate
-    mvn install
-    copy all.jar into Arduino/tools/CardublockTool/tool
+The project is managed by Apache Maven. For installation instructions, see https://maven.apache.org/install.html.
 
-For Windows
-    
-    coming soon
+ArduBlock and all its forks are dependent on openblocks. Thus, you must run install_openblocks.sh.
+
+After checking out the source for the first time, one should run the following to install Arduino's pde.jar into the local repository:
+
+	$ mvn validate
+
+Development and Usage
+----
+Change the /src/main/resources/com/ardublock/block/ardublock.xml to add new blocks to CarduBlock.
+
+To package CarduBlock EDU to a .jar file, run:
+
+	$ mvn clean package
+
+For use in the Arduino IDE, copy the target/cardublock_edu-all.jar to Arduino/tools/CardublockTool/tool.
+
+If we run:
+
+	$ mvn compile exec:java -Dexec.mainClass="com.ardublock.Main"
+
+The Visual Block environment should show up. Happy Hacking! ;)
 
 
 ArduBlock
@@ -22,40 +34,10 @@ ArduBlock
 
 ArduBlock is a Block Programming Language for Arduino. The language and functions model closely to [Arduino Language Reference](http://arduino.cc/en/Reference/HomePage)
 
-Installation
-----
-The project is managed by Maven. After checking out the source for the first time, one should run the following to install Arduino's pde.jar into the local repository. 
-
-	$ mvn validate
-
-Usage
-----
-
-	$ mvn exec:java -Dexec.mainClass="com.ardublock.Main"
-
-Development
-----
-Change the /src/main/resources/com/ardublock/block/ardublock_def.xml to add new blocks to ArduBlock
-
-	$ mvn clean package
-
-	$ mvn compile exec:java -Dexec.mainClass="com.ardublock.Main"
-
-The Visual Block environment should show up. Happy Hacking! ;) 
-
-Deploy
-----
-Edit code of ardublock
-
-	$ mvn clean package
-
-copy the target/ardublock-all.jar to Arduino\tools\ArduBlockTool\tool
-
 Authors
 ----
 * David Li taweili@gmail.com
 * HE Qichen heqichen@gmail.com
-
 
 ToDo
 ----
