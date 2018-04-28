@@ -51,7 +51,7 @@ public class Context
 	private String arduinoVersionString = ARDUINO_VERSION_UNKNOWN;
 	private OsType osType; 
 
-	final public static String APP_NAME = "CarduBlock Edu";
+	final public static String APP_NAME = "ArduBlock";
 	
 	private Editor editor;
 	
@@ -110,7 +110,8 @@ public class Context
 		// Style list
 		List<String[]> list = new ArrayList<String[]>();
 		String[][] styles = {};
-
+		
+		//		{ "//BlockGenus[@name[starts-with(.,\"Tinker\")]]/@color", "128 0 0" },
 		//		{ "//BlockGenus[@name[starts-with(.,\"df_\")]]/@color",	"0 128 0" } };
 
 		for (String[] style : styles) {

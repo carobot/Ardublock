@@ -1446,7 +1446,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="variable_number" kind="data" initlabel="bg.variable_number" editable-label="yes" is-label-value="yes" color="112 146 190">
+		<BlockGenus name="variable_number" kind="data" initlabel="bg.variable_number" editable-label="yes" is-label-value="yes" color="230 110 110">
 			<description>
 				<text>
 					Digital Var
@@ -2196,6 +2196,84 @@
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
+		
+		<!-- <BlockGenus name="sd_write" kind="command" color="0 100 90" -->
+		<!-- initlabel="bg.sd_write"> -->
+		<!-- <description> -->
+		<!-- <text>Write to SD card</text> -->
+		<!-- </description> -->
+		<!-- <BlockConnectors> -->
+		<!-- <BlockConnector connector-type="string" -->
+		<!-- connector-kind="socket" label="File"> -->
+		<!-- <DefaultArg genus-name="glue_msg" label="file.txt" /> -->
+		<!-- </BlockConnector> -->
+		<!-- <BlockConnector connector-type="string" -->
+		<!-- connector-kind="socket" label="Return"> -->
+		<!-- <DefaultArg genus-name="sd_return" label="Return" /> -->
+		<!-- </BlockConnector> -->
+		<!-- <BlockConnector connector-type="string" -->
+		<!-- connector-kind="socket" label="Data"> -->
+		<!-- <DefaultArg genus-name="message" label="Data" /> -->
+		<!-- </BlockConnector> -->
+		<!-- </BlockConnectors> -->
+		<!-- </BlockGenus> -->
+		<!-- -->
+		<!-- <BlockGenus name="sd_write_number" kind="command" color="0 100 90" -->
+		<!-- initlabel="bg.sd_write_number"> -->
+		<!-- <description> -->
+		<!-- <text>Write to SD card</text> -->
+		<!-- </description> -->
+		<!-- <BlockConnectors> -->
+		<!-- <BlockConnector connector-type="string" -->
+		<!-- connector-kind="socket" label="File"> -->
+		<!-- <DefaultArg genus-name="glue_msg" label="file.txt" /> -->
+		<!-- </BlockConnector> -->
+		<!-- <BlockConnector connector-type="string" -->
+		<!-- connector-kind="socket" label="Return"> -->
+		<!-- <DefaultArg genus-name="sd_return" label="Return" /> -->
+		<!-- </BlockConnector> -->
+		<!-- <BlockConnector connector-type="number" -->
+		<!-- connector-kind="socket" label="Number"> -->
+		<!-- <DefaultArg genus-name="number" label="0" /> -->
+		<!-- </BlockConnector> -->
+		<!-- </BlockConnectors> -->
+		<!-- </BlockGenus> -->
+		<!-- -->
+		<!-- <BlockGenus name="sd_write_number_int" kind="command" color="0 100 90" -->
+		<!-- initlabel="bg.sd_write_number_int"> -->
+		<!-- <description> -->
+		<!-- <text>Write number to SD card</text> -->
+		<!-- </description> -->
+		<!-- <BlockConnectors> -->
+		<!-- <BlockConnector connector-type="string" -->
+		<!-- connector-kind="socket" label="File"> -->
+		<!-- <DefaultArg genus-name="glue_msg" label="file.txt" /> -->
+		<!-- </BlockConnector> -->
+		<!-- <BlockConnector connector-type="string" -->
+		<!-- connector-kind="socket" label="Return"> -->
+		<!-- <DefaultArg genus-name="sd_return" label="Return" /> -->
+		<!-- </BlockConnector> -->
+		<!-- <BlockConnector connector-type="number" -->
+		<!-- connector-kind="socket" label="Number"> -->
+		<!-- <DefaultArg genus-name="number" label="0" /> -->
+		<!-- </BlockConnector> -->
+		<!-- </BlockConnectors> -->
+		<!-- </BlockGenus> -->
+
+		<!-- <BlockGenus name="sd_return" kind="data" color="255 255 0" -->
+		<!-- initlabel="bg.sd_return" editable-label="no"> -->
+		<!-- <BlockConnectors> -->
+		<!-- <BlockConnector connector-type="string" -->
+		<!-- connector-kind="mirror" /> -->
+		<!-- </BlockConnectors> -->
+		<!-- </BlockGenus> -->
+		<!-- <BlockGenus name="sd_no_return" kind="data" color="255 255 0" -->
+		<!-- initlabel="bg.sd_no_return" editable-label="no"> -->
+		<!-- <BlockConnectors> -->
+		<!-- <BlockConnector connector-type="string" -->
+		<!-- connector-kind="mirror" /> -->
+		<!-- </BlockConnectors> -->
+		<!-- </BlockGenus> -->
 		<BlockGenus name="MaSD_file" kind="command" color="0 255 0" initlabel="bg.MaSD_file">
 			<BlockConnectors>
 				<BlockConnector connector-type="string" connector-kind="socket" label="bc.File">
@@ -2377,8 +2455,356 @@
 		
 		
 		
-		<!--************************************************************** CAROBOT SwissCHEESE ********************************************************************** -->
-		<BlockGenus name="Carobot_LED" kind="command" color="195 38 50" initlabel="bg.Carobot_LED">
+		<!--************************************************************** TinkerKit! ********************************************************************** -->
+		<BlockGenus name="Tinker_LED" kind="command" color="13 152 164" initlabel="bg.Tinker_LED">
+			<description>
+				<text>TinkerKit LED</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="Tinker_O1" label="O1" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
+					<DefaultArg genus-name="digital-on" label="ON" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/arduino/Tinker_LED.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="Tinker_LED_pwm" kind="command" color="13 152 164" initlabel="bg.Tinker_LED_pwm">
+			<description>
+				<text>TinkerKit LED</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="Tinker_O1" label="O1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.level">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/arduino/Tinker_LED.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="Tinker_Mosfet" kind="command" color="13 152 164" initlabel="bg.Tinker_Mosfet">
+			<description>
+				<text>TinkerKit Mosfet</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="Tinker_O1" label="O1" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
+					<DefaultArg genus-name="digital-high" label="HIGH" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/arduino/Tinker_Mosfet.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="Tinker_Mosfet_pwm" kind="command" color="13 152 164" initlabel="bg.Tinker_Mosfet_pwm">
+			<description>
+				<text>TinkerKit Mosfet</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="Tinker_O1" label="O1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.level">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/arduino/Tinker_Mosfet.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="Tinker_Relay" kind="command" color="13 152 164" initlabel="bg.Tinker_Relay">
+			<description>
+				<text>TinkerKit Relay</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="Tinker_O1" label="O1" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
+					<DefaultArg genus-name="digital-high" label="HIGH" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/arduino/Tinker_Relay.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="Tinker_Servo" kind="command" color="13 152 164" initlabel="bg.Tinker_Servo">
+			<description>
+				<text>TinkerKit Servo</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="Tinker_O1" label="O1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.angle">
+					<DefaultArg genus-name="number" label="90" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/arduino/Tinker_Servo.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="Tinker_Button" kind="data" color="13 152 164" initlabel="bg.Tinker_Button">
+			<description>
+				<text>TinkerKit Button</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="Tinker_I1" label="I1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/arduino/Tinker_Button.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="Tinker_Accmeter" kind="data" color="13 152 164" initlabel="bg.Tinker_Accmeter">
+			<description>
+				<text>TinkerKit Accelerometer</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="Tinker_I1" label="I1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/arduino/Tinker_Accmeter.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="Tinker_Hall" kind="data" color="13 152 164" initlabel="bg.Tinker_Hall">
+			<description>
+				<text>TinkerKit Hall Sensor</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="Tinker_I1" label="I1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/arduino/Tinker_Hall.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="Tinker_LDR" kind="data" color="13 152 164" initlabel="bg.Tinker_LDR">
+			<description>
+				<text>TinkerKit LDR</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="Tinker_I1" label="I1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/arduino/Tinker_LDR.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="Tinker_LinearPotentiometer" kind="data" color="13 152 164" initlabel="bg.Tinker_LinearPotentiometer">
+			<description>
+				<text>TinkerKit Accelerometer</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="Tinker_I1" label="I1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/arduino/Tinker_LinearPotentiometer.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="Tinker_RotaryPotentiometer" kind="data" color="13 152 164" initlabel="bg.Tinker_RotaryPotentiometer">
+			<description>
+				<text>TinkerKit RotaryPotentiometer</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="Tinker_I1" label="I1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/arduino/Tinker_RotaryPotentiometer.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="Tinker_Thermistor" kind="data" color="13 152 164" initlabel="bg.Tinker_Thermistor">
+			<description>
+				<text>TinkerKit Thermistor</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="Tinker_I1" label="I1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/arduino/Tinker_Thermistor.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="Tinker_Touch" kind="data" color="13 152 164" initlabel="bg.Tinker_Touch">
+			<description>
+				<text>TinkerKit Touch Sensor</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="Tinker_I1" label="I1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/arduino/Tinker_Touch.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="Tinker_Servo" kind="command" color="13 152 164" initlabel="bg.Tinker_Servo">
+			<description>
+				<text>TinkerKit Servo</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="Tinker_I1" label="I1" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.angle">
+					<DefaultArg genus-name="number" label="90" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/arduino/Tinker_Servo.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="Tinker_Tilt" kind="data" color="13 152 164" initlabel="bg.Tinker_Tilt">
+			<description>
+				<text>TinkerKit Tilt</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="boolean" connector-kind="plug" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+					<DefaultArg genus-name="Tinker_I1" label="I1" />
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/arduino/Tinker_Tilt.jpg</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="Tinker_I0" kind="data" color="13 152 164" initlabel="bg.Tinker_I0" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Tinker_I1" kind="data" color="13 152 164" initlabel="bg.Tinker_I1" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Tinker_I2" kind="data" color="13 152 164" initlabel="bg.Tinker_I2" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Tinker_I3" kind="data" color="13 152 164" initlabel="bg.Tinker_I3" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Tinker_I4" kind="data" color="13 152 164" initlabel="bg.Tinker_I4" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Tinker_I5" kind="data" color="13 152 164" initlabel="bg.Tinker_I5" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="Tinker_O0" kind="data" color="214 169 54" initlabel="bg.Tinker_O0" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Tinker_O1" kind="data" color="214 169 54" initlabel="bg.Tinker_O1" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Tinker_O2" kind="data" color="214 169 54" initlabel="bg.Tinker_O2" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Tinker_O3" kind="data" color="214 169 54" initlabel="bg.Tinker_O3" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Tinker_O4" kind="data" color="214 169 54" initlabel="bg.Tinker_O4" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Tinker_O5" kind="data" color="214 169 54" initlabel="bg.Tinker_O5" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+
+		<!--************************************************************** CAROBOT SwissCHEESE ********************************************************************** --><BlockGenus name="Carobot_LED" kind="command" color="195 38 50" initlabel="bg.Carobot_LED">
 			<description>
 				<text>CAROBOT SwissCHEESE LED</text>
 			</description>
@@ -2395,9 +2821,7 @@
 					<FileLocation>com/ardublock/block/carobot/Carobot_LED.png</FileLocation>
 				</Image>
 			</Images>
-		</BlockGenus>
-
-		<BlockGenus name="Carobot_LED_pwm" kind="command" color="195 38 50" initlabel="bg.Carobot_LED_pwm">
+		</BlockGenus><BlockGenus name="Carobot_LED_pwm" kind="command" color="195 38 50" initlabel="bg.Carobot_LED_pwm">
 			<description>
 				<text>CAROBOT SwissCHEESE LED</text>
 			</description>
@@ -2414,9 +2838,7 @@
 					<FileLocation>com/ardublock/block/carobot/Carobot_LED.png</FileLocation>
 				</Image>
 			</Images>
-		</BlockGenus>
-
-		<BlockGenus name="Carobot_Servo" kind="command" color="205 133 63" initlabel="bg.Carobot_Servo">
+		</BlockGenus><BlockGenus name="Carobot_Servo" kind="command" color="205 133 63" initlabel="bg.Carobot_Servo">
 			<description>
 				<text>CAROBOT SwissCHEESE Servo</text>
 			</description>
@@ -2428,14 +2850,7 @@
 					<DefaultArg genus-name="number" label="90" />
 				</BlockConnector>
 			</BlockConnectors>
-			<Images>
-				<Image>
-					<FileLocation>com/ardublock/block/carobot/Carobot_Servo.png</FileLocation>
-				</Image>
-			</Images>
-		</BlockGenus>
-
-		<BlockGenus name="Carobot_Button" kind="data" color="195 38 50" initlabel="bg.Carobot_Button">
+		</BlockGenus><BlockGenus name="Carobot_Button" kind="data" color="195 38 50" initlabel="bg.Carobot_Button">
 			<description>
 				<text>CAROBOT SwissCHEESE Button</text>
 			</description>
@@ -2450,9 +2865,7 @@
 					<FileLocation>com/ardublock/block/carobot/Carobot_Button.png</FileLocation>
 				</Image>
 			</Images>
-		</BlockGenus>
-
-		<BlockGenus name="Carobot_RotaryPotentiometer" kind="data" color="195 38 50" initlabel="bg.Carobot_RotaryPotentiometer">
+		</BlockGenus><BlockGenus name="Carobot_RotaryPotentiometer" kind="data" color="195 38 50" initlabel="bg.Carobot_RotaryPotentiometer">
 			<description>
 				<text>CAROBOT SwissCHEESE RotaryPotentiometer</text>
 			</description>
@@ -2467,19 +2880,15 @@
 					<FileLocation>com/ardublock/block/carobot/Carobot_RotaryPotentiometer.png</FileLocation>
 				</Image>
 			</Images>
-		</BlockGenus>
-
-		<BlockGenus name="Carobot_Tone" kind="command" color="195 38 50" initlabel="bg.Carobot_Tone">
+		</BlockGenus><BlockGenus name="Carobot_Tone" kind="command" color="195 38 50" initlabel="bg.Carobot_Tone">
 			<description>
 				<text>Generates a square wave of the specified frequency (and 50% duty cycle) on a pin.</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number"
-					connector-kind="socket" label="bc.pin_number">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="Carobot_O0" label="O0" />
 				</BlockConnector>
-				<BlockConnector connector-type="number"
-					connector-kind="socket" label="bc.frequency">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.frequency">
 					<DefaultArg genus-name="number" label="440" />
 				</BlockConnector>
 			</BlockConnectors>
@@ -2489,7 +2898,6 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-
 		<BlockGenus name="Carobot_ToneTime" kind="command" color="195 38 50" initlabel="bg.Carobot_ToneTime">
 			<description>
 				<text>Generates a square wave of the specified frequency (and 50% duty cycle) on a pin.</text>
@@ -2512,14 +2920,12 @@
 					<FileLocation>com/ardublock/block/carobot/Carobot_Buzzer.png</FileLocation>
 				</Image>
 			</Images></BlockGenus>
-
 		<BlockGenus name="Carobot_NoTone" kind="command" color="195 38 50" initlabel="bg.Carobot_NoTone">
 			<description>
 				<text>Stops the generation of a square wave triggered by tone().</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number"
-					connector-kind="socket" label="bc.pin_number">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="Carobot_O0" label="O0" />
 				</BlockConnector>
 			</BlockConnectors>
@@ -2528,22 +2934,17 @@
 					<FileLocation>com/ardublock/block/carobot/Carobot_Buzzer.png</FileLocation>
 				</Image>
 			</Images>
-		</BlockGenus>
-
-		<BlockGenus name="Carobot_Ultrasonic" kind="data" color="195 38 50" initlabel="bg.Carobot_Ultrasonic">
+		</BlockGenus><BlockGenus name="Carobot_Ultrasonic" kind="data" color="195 38 50" initlabel="bg.Carobot_Ultrasonic">
 			<description>
 				<text>CAROBOT SwissCHEESE Ultrasonic</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number"
-					connector-kind="plug" label="cm">
+				<BlockConnector connector-type="number" connector-kind="plug" label="cm">
 				</BlockConnector>
-				<BlockConnector connector-type="number"
-					connector-kind="socket" label="trigger #">
+				<BlockConnector connector-type="number" connector-kind="socket" label="trigger #">
 					<DefaultArg genus-name="Carobot_O0" label="O0" />
 				</BlockConnector>
-				<BlockConnector connector-type="number"
-					connector-kind="socket" label="echo #">
+				<BlockConnector connector-type="number" connector-kind="socket" label="echo #">
 					<DefaultArg genus-name="Carobot_I0" label="I0" />
 				</BlockConnector>
 			</BlockConnectors>
@@ -2552,18 +2953,14 @@
 					<FileLocation>com/ardublock/block/carobot/Carobot_Ultrasonic.png</FileLocation>
 				</Image>
 			</Images>
-		</BlockGenus>
-
-		<BlockGenus name="Carobot_Infrared" kind="data" color="195 38 50" initlabel="bg.Carobot_Infrared">
+		</BlockGenus><BlockGenus name="Carobot_Infrared" kind="data" color="195 38 50" initlabel="bg.Carobot_Infrared">
 			<description>
 				<text>CAROBOT SwissCHEESE Infrared</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number"
-					connector-kind="plug">
+				<BlockConnector connector-type="number" connector-kind="plug">
 				</BlockConnector>
-				<BlockConnector connector-type="number"
-					connector-kind="socket" label="bc.pin_number">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="Carobot_I0" label="I0" />
 				</BlockConnector>
 			</BlockConnectors>
@@ -2572,32 +2969,26 @@
 					<FileLocation>com/ardublock/block/carobot/Carobot_Infrared.png</FileLocation>
 				</Image>
 			</Images>
-		</BlockGenus>
-		<BlockGenus name="Carobot_LDR" kind="data" color="195 38 50" initlabel="bg.Carobot_LDR">
+		</BlockGenus><BlockGenus name="Carobot_LDR" kind="data" color="195 38 50" initlabel="bg.Carobot_LDR">
 			<description>
 				<text>CAROBOT SwissCHEESE LDR</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number"
-					connector-kind="plug">
+				<BlockConnector connector-type="number" connector-kind="plug">
 				</BlockConnector>
-				<BlockConnector connector-type="number"
-					connector-kind="socket" label="bc.pin_number">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="Carobot_I0" label="I0" />
 				</BlockConnector></BlockConnectors>
 			<Images>
 				<Image>
 					<FileLocation>com/ardublock/block/carobot/Carobot_LDR.png</FileLocation>
 				</Image>
-			</Images></BlockGenus>
-
-		<BlockGenus name="Carobot_MotorBackward" kind="command" color="205 133 63" initlabel="bg.Carobot_MotorBackward">
+			</Images></BlockGenus><BlockGenus name="Carobot_MotorBackward" kind="command" color="205 133 63" initlabel="bg.Carobot_MotorBackward">
 			<description>
 				<text>CAROBOT SwissCHEESE MotorBackward</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number"
-					connector-kind="socket" label="bc.motor_number">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.motor_number">
 					<DefaultArg genus-name="Carobot_M1" label="M1" />
 				</BlockConnector>
 			</BlockConnectors>
@@ -2606,15 +2997,12 @@
 					<FileLocation>com/ardublock/block/carobot/Carobot_Motor.png</FileLocation>
 				</Image>
 			</Images>
-		</BlockGenus>
-
-		<BlockGenus name="Carobot_MotorForward" kind="command" color="205 133 63" initlabel="bg.Carobot_MotorForward">
+		</BlockGenus><BlockGenus name="Carobot_MotorForward" kind="command" color="205 133 63" initlabel="bg.Carobot_MotorForward">
 			<description>
 				<text>CAROBOT SwissCHEESE MotorForward</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number"
-					connector-kind="socket" label="bc.motor_number">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.motor_number">
 					<DefaultArg genus-name="Carobot_M1" label="M1" />
 				</BlockConnector>
 			</BlockConnectors>
@@ -2623,19 +3011,15 @@
 					<FileLocation>com/ardublock/block/carobot/Carobot_Motor.png</FileLocation>
 				</Image>
 			</Images>
-		</BlockGenus>
-
-		<BlockGenus name="Carobot_MotorSpeed" kind="command" color="205 133 63" initlabel="bg.Carobot_MotorSpeed">
+		</BlockGenus><BlockGenus name="Carobot_MotorSpeed" kind="command" color="205 133 63" initlabel="bg.Carobot_MotorSpeed">
 			<description>
 				<text>CAROBOT SwissCHEESE MotorSpeed</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number"
-					connector-kind="socket" label="bc.motor_number">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.motor_number">
 					<DefaultArg genus-name="Carobot_M1" label="M1" />
 				</BlockConnector>
-				<BlockConnector connector-type="number"
-					connector-kind="socket" label="bc.speed_number">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.speed_number">
 					<DefaultArg genus-name="number" label="255" />
 				</BlockConnector>
 			</BlockConnectors>
@@ -2644,15 +3028,12 @@
 					<FileLocation>com/ardublock/block/carobot/Carobot_Motor.png</FileLocation>
 				</Image>
 			</Images>
-		</BlockGenus>
-
-		<BlockGenus name="Carobot_MotorStop" kind="command" color="205 133 63" initlabel="bg.Carobot_MotorStop">
+		</BlockGenus><BlockGenus name="Carobot_MotorStop" kind="command" color="205 133 63" initlabel="bg.Carobot_MotorStop">
 			<description>
 				<text>CAROBOT SwissCHEESE MotorStop</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number"
-					connector-kind="socket" label="bc.motor_number">
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.motor_number">
 					<DefaultArg genus-name="Carobot_M1" label="M1" />
 				</BlockConnector>
 			</BlockConnectors>
@@ -2661,102 +3042,74 @@
 					<FileLocation>com/ardublock/block/carobot/Carobot_Motor.png</FileLocation>
 				</Image>
 			</Images>
-		</BlockGenus>
-
-		<BlockGenus name="Carobot_I0" kind="data" color="195 38 50" initlabel="bg.Carobot_I0" editable-label="no">
+		</BlockGenus><BlockGenus name="Carobot_I0" kind="data" color="195 38 50" initlabel="bg.Carobot_I0" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
-		</BlockGenus>
-		<BlockGenus name="Carobot_I1" kind="data" color="195 38 50" initlabel="bg.Carobot_I1" editable-label="no">
+		</BlockGenus><BlockGenus name="Carobot_I1" kind="data" color="195 38 50" initlabel="bg.Carobot_I1" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
-		</BlockGenus>
-		<BlockGenus name="Carobot_I2" kind="data" color="195 38 50" initlabel="bg.Carobot_I2" editable-label="no">
+		</BlockGenus><BlockGenus name="Carobot_I2" kind="data" color="195 38 50" initlabel="bg.Carobot_I2" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
-		</BlockGenus>
-		<BlockGenus name="Carobot_I3" kind="data" color="195 38 50" initlabel="bg.Carobot_I3" editable-label="no">
+		</BlockGenus><BlockGenus name="Carobot_I3" kind="data" color="195 38 50" initlabel="bg.Carobot_I3" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
-		</BlockGenus>
-		<BlockGenus name="Carobot_I4" kind="data" color="195 38 50" initlabel="bg.Carobot_I4" editable-label="no">
+		</BlockGenus><BlockGenus name="Carobot_I4" kind="data" color="195 38 50" initlabel="bg.Carobot_I4" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
-		</BlockGenus>
-		<BlockGenus name="Carobot_I5" kind="data" color="195 38 50" initlabel="bg.Carobot_I5" editable-label="no">
+		</BlockGenus><BlockGenus name="Carobot_I5" kind="data" color="195 38 50" initlabel="bg.Carobot_I5" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
-		</BlockGenus>
-
-		<BlockGenus name="Carobot_O0" kind="data" color="214 169 54" initlabel="bg.Carobot_O0" editable-label="no">
+		</BlockGenus><BlockGenus name="Carobot_O0" kind="data" color="214 169 54" initlabel="bg.Carobot_O0" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
-		</BlockGenus>
-		<BlockGenus name="Carobot_O1" kind="data" color="214 169 54" initlabel="bg.Carobot_O1" editable-label="no">
+		</BlockGenus><BlockGenus name="Carobot_O1" kind="data" color="214 169 54" initlabel="bg.Carobot_O1" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
-		</BlockGenus>
-		<BlockGenus name="Carobot_O2" kind="data" color="214 169 54" initlabel="bg.Carobot_O2" editable-label="no">
+		</BlockGenus><BlockGenus name="Carobot_O2" kind="data" color="214 169 54" initlabel="bg.Carobot_O2" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
-		</BlockGenus>
-		<BlockGenus name="Carobot_O3" kind="data" color="214 169 54" initlabel="bg.Carobot_O3" editable-label="no">
+		</BlockGenus><BlockGenus name="Carobot_O3" kind="data" color="214 169 54" initlabel="bg.Carobot_O3" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
-		</BlockGenus>
-		<BlockGenus name="Carobot_O4" kind="data" color="214 169 54" initlabel="bg.Carobot_O4" editable-label="no">
+		</BlockGenus><BlockGenus name="Carobot_O4" kind="data" color="214 169 54" initlabel="bg.Carobot_O4" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
-		</BlockGenus>
-		<BlockGenus name="Carobot_O5" kind="data" color="214 169 54" initlabel="bg.Carobot_O5" editable-label="no">
+		</BlockGenus><BlockGenus name="Carobot_O5" kind="data" color="214 169 54" initlabel="bg.Carobot_O5" editable-label="no">
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
-		</BlockGenus>
-		<BlockGenus name="Carobot_O6" kind="data" color="214 169 54"
-			initlabel="bg.Carobot_O6" editable-label="no">
+		</BlockGenus><BlockGenus name="Carobot_O6" kind="data" color="214 169 54" initlabel="bg.Carobot_O6" editable-label="no">
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug"
-					label="mirror">
+				<BlockConnector connector-type="number" connector-kind="plug" label="mirror">
 				</BlockConnector></BlockConnectors>
-		</BlockGenus>
-		<BlockGenus name="Carobot_O7" kind="data" color="214 169 54"
-			initlabel="bg.Carobot_O7" editable-label="no">
+		</BlockGenus><BlockGenus name="Carobot_O7" kind="data" color="214 169 54" initlabel="bg.Carobot_O7" editable-label="no">
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="plug"
-					label="mirror">
+				<BlockConnector connector-type="number" connector-kind="plug" label="mirror">
 				</BlockConnector></BlockConnectors>
-		</BlockGenus>
-		<BlockGenus name="Carobot_M1" kind="data" color="195 38 50"
-			initlabel="bg.Carobot_M1" editable-label="no">
+		</BlockGenus><BlockGenus name="Carobot_M1" kind="data" color="195 38 50" initlabel="bg.Carobot_M1" editable-label="no">
 			<BlockConnectors>
-				<BlockConnector connector-type="number"
-					connector-kind="plug">
+				<BlockConnector connector-type="number" connector-kind="plug">
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector></BlockConnectors>
-		</BlockGenus>
-		<BlockGenus name="Carobot_M2" kind="data" color="195 38 50"
-			initlabel="bg.Carobot_M2" editable-label="no">
+		</BlockGenus><BlockGenus name="Carobot_M2" kind="data" color="195 38 50" initlabel="bg.Carobot_M2" editable-label="no">
 			<BlockConnectors>
-				<BlockConnector connector-type="number"
-					connector-kind="plug">
+				<BlockConnector connector-type="number" connector-kind="plug">
 					<DefaultArg genus-name="number" label="2">
 					</DefaultArg>
 				</BlockConnector></BlockConnectors>
-		</BlockGenus>
-
-		<!-- Xinchejian -->
+		</BlockGenus><!-- Xinchejian -->
 
 		<BlockGenus name="xcj_motor_forward" kind="command" color="0 255 0" initlabel="bg.xcj_motor_forward">
 			<description>
@@ -2819,6 +3172,69 @@
 				<BlockConnector connector-type="number" connector-kind="socket" label="S#">
 					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<!-- ******** Panda Shield ******** -->
+		<BlockGenus name="panda_i1" kind="data" color="214 169 54" initlabel="bg.panda_i1" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="panda_i2" kind="data" color="214 169 54" initlabel="bg.panda_i2" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="panda_i3" kind="data" color="214 169 54" initlabel="bg.panda_i3" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="panda_i4" kind="data" color="214 169 54" initlabel="bg.panda_i4" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="panda_i5" kind="data" color="214 169 54" initlabel="bg.panda_i5" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="panda_i6" kind="data" color="214 169 54" initlabel="bg.panda_i6" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		
+		<BlockGenus name="panda_o1" kind="data" color="214 169 54" initlabel="bg.panda_o1" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="panda_o2" kind="data" color="214 169 54" initlabel="bg.panda_o2" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="panda_o3" kind="data" color="214 169 54" initlabel="bg.panda_o3" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="panda_o4" kind="data" color="214 169 54" initlabel="bg.panda_o4" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="panda_o5" kind="data" color="214 169 54" initlabel="bg.panda_o5" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="panda_o6" kind="data" color="214 169 54" initlabel="bg.panda_o6" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror" />
 			</BlockConnectors>
 		</BlockGenus>
 		
@@ -10259,6 +10675,94 @@
 			</BlockConnectors>
 		</BlockGenus>
 
+	<!-- Jerusalab -->
+		<BlockGenus name="midi_command" kind="command" color="191 77 169" initlabel="bg.midi_command">
+			<description>
+				<text>Midi Command</text>
+			</description>
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="socket" label="note">
+					<DefaultArg genus-name="Midi_C" label="C"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="octave">
+					<DefaultArg genus-name="number" label="3"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="channel">
+					<DefaultArg genus-name="number" label="0"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="velocity">
+					<DefaultArg genus-name="number" label="127"/>
+				</BlockConnector>
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/jerusalab/midi_command.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+
+		<BlockGenus name="Midi_C" kind="data" color="255 255 255" initlabel="bg.Midi_C" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+		</BlockGenus>
+
+		<BlockGenus name="Midi_CS" kind="data" color="255 255 255" initlabel="bg.Midi_CS" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Midi_D" kind="data" color="255 255 255" initlabel="bg.Midi_D" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Midi_DS" kind="data" color="255 255 255" initlabel="bg.Midi_DS" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Midi_E" kind="data" color="255 255 255" initlabel="bg.Midi_E" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Midi_F" kind="data" color="255 255 255" initlabel="bg.Midi_F" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Midi_FS" kind="data" color="255 255 255" initlabel="bg.Midi_FS" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Midi_G" kind="data" color="255 255 255" initlabel="bg.Midi_G" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Midi_GS" kind="data" color="255 255 255" initlabel="bg.Midi_GS" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Midi_A" kind="data" color="255 255 255" initlabel="bg.Midi_A" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Midi_AS" kind="data" color="255 255 255" initlabel="bg.Midi_AS" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+		</BlockGenus>
+		<BlockGenus name="Midi_B" kind="data" color="255 255 255" initlabel="bg.Midi_B" editable-label="no">
+			<BlockConnectors>
+				<BlockConnector connector-type="number" connector-kind="plug" position-type="mirror"/>
+			</BlockConnectors>
+		</BlockGenus>
+
 	</BlockGenuses>
 
 	<BlockFamilies>
@@ -10359,24 +10863,34 @@
 			<FamilyMember>df_mma7260_z</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
-			<FamilyMember>Carobot_I0</FamilyMember>
-			<FamilyMember>Carobot_I1</FamilyMember>
-			<FamilyMember>Carobot_I2</FamilyMember>
-			<FamilyMember>Carobot_I3</FamilyMember>
-			<FamilyMember>Carobot_I4</FamilyMember>
-			<FamilyMember>Carobot_I5</FamilyMember>
+			<FamilyMember>Tinker_I0</FamilyMember>
+			<FamilyMember>Tinker_I1</FamilyMember>
+			<FamilyMember>Tinker_I2</FamilyMember>
+			<FamilyMember>Tinker_I3</FamilyMember>
+			<FamilyMember>Tinker_I4</FamilyMember>
+			<FamilyMember>Tinker_I5</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
-			<FamilyMember>Carobot_O0</FamilyMember>
-			<FamilyMember>Carobot_O1</FamilyMember>
-			<FamilyMember>Carobot_O2</FamilyMember>
-			<FamilyMember>Carobot_O3</FamilyMember>
-			<FamilyMember>Carobot_O4</FamilyMember>
-			<FamilyMember>Carobot_O5</FamilyMember>
-		</BlockFamily>'
+			<FamilyMember>Tinker_O0</FamilyMember>
+			<FamilyMember>Tinker_O1</FamilyMember>
+			<FamilyMember>Tinker_O2</FamilyMember>
+			<FamilyMember>Tinker_O3</FamilyMember>
+			<FamilyMember>Tinker_O4</FamilyMember>
+			<FamilyMember>Tinker_O5</FamilyMember>
+		</BlockFamily>
 		<BlockFamily>
-			<FamilyMember>Carobot_M1</FamilyMember>
-			<FamilyMember>Carobot_M2</FamilyMember>
+			<FamilyMember>panda_i1</FamilyMember>
+			<FamilyMember>panda_i2</FamilyMember>
+			<FamilyMember>panda_i3</FamilyMember>
+			<FamilyMember>panda_i4</FamilyMember>
+			<FamilyMember>panda_i5</FamilyMember>
+		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>panda_o1</FamilyMember>
+			<FamilyMember>panda_o2</FamilyMember>
+			<FamilyMember>panda_o3</FamilyMember>
+			<FamilyMember>panda_o4</FamilyMember>
+			<FamilyMember>panda_o5</FamilyMember>
 		</BlockFamily>
 		<BlockFamily>
 			<FamilyMember>ada_dc_motor_fwd</FamilyMember>
@@ -10773,6 +11287,20 @@
 			<FamilyMember>DUPONT_CS</FamilyMember>
 			<FamilyMember>ESPLORA_CS</FamilyMember>
 		</BlockFamily>
+		<BlockFamily>
+			<FamilyMember>Midi_C</FamilyMember>
+			<FamilyMember>Midi_CS</FamilyMember>
+			<FamilyMember>Midi_D</FamilyMember>
+			<FamilyMember>Midi_DS</FamilyMember>
+			<FamilyMember>Midi_E</FamilyMember>
+			<FamilyMember>Midi_F</FamilyMember>
+			<FamilyMember>Midi_FS</FamilyMember>
+			<FamilyMember>Midi_G</FamilyMember>
+			<FamilyMember>Midi_GS</FamilyMember>
+			<FamilyMember>Midi_A</FamilyMember>
+			<FamilyMember>Midi_AS</FamilyMember>
+			<FamilyMember>Midi_B</FamilyMember>
+		</BlockFamily>
 		
 	</BlockFamilies>
 
@@ -10804,9 +11332,14 @@
 				<BlockGenusMember>pin-write-digital</BlockGenusMember>
 				<BlockGenusMember>pin-write-analog</BlockGenusMember>
 				<BlockGenusMember>pin-toggle</BlockGenusMember>
+				<BlockGenusMember>df_servo</BlockGenusMember>
 				<BlockGenusMember>df_360_degree_rotation_motor</BlockGenusMember>
+				<BlockGenusMember>ultrasonic</BlockGenusMember>
 				<BlockGenusMember>df_dht11_temperature</BlockGenusMember>
 				<BlockGenusMember>df_dht11_humidity</BlockGenusMember>
+				<BlockGenusMember>tone</BlockGenusMember>
+				<BlockGenusMember>tone_time</BlockGenusMember>
+				<BlockGenusMember>no_tone</BlockGenusMember>
 				<BlockGenusMember>DDRA</BlockGenusMember>
 				<BlockGenusMember>PORTA</BlockGenusMember>
 				<BlockGenusMember>PORT_FIX</BlockGenusMember>
@@ -10874,6 +11407,15 @@
 				<BlockGenusMember>variable_vector</BlockGenusMember>
 				<BlockGenusMember>setter_variable_vector</BlockGenusMember>
 			</BlockDrawer>
+			<BlockDrawer button-color="205 133 63" name="bd.utilities" type="factory">
+				<BlockGenusMember>servo_default</BlockGenusMember>
+				<BlockGenusMember>ultrasonic</BlockGenusMember>
+				<BlockGenusMember>LCD_I2C_Sainsmart_20by4</BlockGenusMember>
+				<BlockGenusMember>LCD_command_lightOff</BlockGenusMember>
+				<BlockGenusMember>LCD_PLL_Sainsmart_16by2</BlockGenusMember>
+				<BlockGenusMember>number-single-I2C-address</BlockGenusMember>
+				<BlockGenusMember>number-single-fixed-parallel</BlockGenusMember>
+			</BlockDrawer>
 			<BlockDrawer button-color="255 255 255" name="bd.communication" type="factory">
 				<BlockGenusMember>serial_available</BlockGenusMember>
 				<BlockGenusMember>serial_available2</BlockGenusMember>
@@ -10889,7 +11431,6 @@
 				<BlockGenusMember>wire_write</BlockGenusMember>
 				<BlockGenusMember>wire_read</BlockGenusMember>
 				<BlockGenusMember>wire_isread</BlockGenusMember>
-				<!--
 				<BlockGenusMember>DuinoEDU_Guino_Read</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Guino_Slider</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_Guino_switch</BlockGenusMember>
@@ -10899,13 +11440,69 @@
 				<BlockGenusMember>DuinoEDU_hand_positionX</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_handRotX</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_angle_pouce</BlockGenusMember>
-				-->
 				<BlockGenusMember>Serialplus_send_variable_number</BlockGenusMember>
 				<BlockGenusMember>Serialplus_send_variable_digital</BlockGenusMember>
 				<BlockGenusMember>Serialplus_receive_number</BlockGenusMember>
 				<BlockGenusMember>Serialplus_receive_digital</BlockGenusMember>
 			</BlockDrawer>
-			<BlockDrawer button-color="195 38 50" name="bd.CAROBOT_SwissCHEESE" type="factory">
+			<BlockDrawer button-color="26 97 218" name="bd.scoop">
+			    <BlockGenusMember>scoop_task</BlockGenusMember>
+				<BlockGenusMember>scoop_loop</BlockGenusMember>
+				<BlockGenusMember>scoop_sleep</BlockGenusMember>
+				<BlockGenusMember>scoop_pin_event</BlockGenusMember>
+				<BlockGenusMember>scoop_event_low</BlockGenusMember>
+				<BlockGenusMember>scoop_event_high</BlockGenusMember>
+				<BlockGenusMember>scoop_event_falling</BlockGenusMember>
+				<BlockGenusMember>scoop_event_rising</BlockGenusMember>
+				<BlockGenusMember>scoop_event_change</BlockGenusMember>
+			</BlockDrawer>
+			<BlockDrawer button-color="0 50 45" name="bd.storage" type="factory">
+				<BlockGenusMember>eeprom_read_int</BlockGenusMember>
+				<BlockGenusMember>eeprom_write_int</BlockGenusMember>
+				<BlockGenusMember>eeprom_read_long</BlockGenusMember>
+				<BlockGenusMember>eeprom_write_long</BlockGenusMember>
+				<BlockGenusMember>eeprom_read</BlockGenusMember>
+				<BlockGenusMember>eeprom_write</BlockGenusMember>
+				<BlockGenusMember>sd_write2</BlockGenusMember>
+				<BlockGenusMember>MaSD_Connect</BlockGenusMember>
+				<BlockGenusMember>MaSD_file</BlockGenusMember>
+				<BlockGenusMember>MaSD_Write</BlockGenusMember>
+				<BlockGenusMember>MaSD_NewLine</BlockGenusMember>
+				<BlockGenusMember>MaSD_separator</BlockGenusMember>
+				<!-- <BlockGenusMember>sd_write</BlockGenusMember> -->
+				<!-- <BlockGenusMember>sd_write_number</BlockGenusMember> -->
+				<!-- <BlockGenusMember>sd_write_number_int</BlockGenusMember> -->
+			</BlockDrawer>
+			<BlockDrawer button-color="169 148 212" name="bd.network" type="factory">
+				<BlockGenusMember>bleshield</BlockGenusMember>
+				<BlockGenusMember>bleshield_available</BlockGenusMember>
+				<BlockGenusMember>bleshield_read_poly</BlockGenusMember>
+				<BlockGenusMember>bleshield_compare</BlockGenusMember>
+			</BlockDrawer>
+			<BlockDrawer button-color="120 120 120" name="bd.especial" type="factory">
+				<BlockGenusMember>code_head</BlockGenusMember>
+				<BlockGenusMember>code_setup</BlockGenusMember>
+				<BlockGenusMember>code_loop</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_code_head</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_code_setup</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_code_loop</BlockGenusMember>
+			</BlockDrawer>
+			<BlockDrawer button-color="13 152 164" name="bd.tinkerkit" type="factory">
+				<BlockGenusMember>Tinker_LED</BlockGenusMember>
+				<BlockGenusMember>Tinker_LED_pwm</BlockGenusMember>
+				<BlockGenusMember>Tinker_Button</BlockGenusMember>
+				<BlockGenusMember>Tinker_Accmeter</BlockGenusMember>
+				<BlockGenusMember>Tinker_Hall</BlockGenusMember>
+				<BlockGenusMember>Tinker_LDR</BlockGenusMember>
+				<BlockGenusMember>Tinker_LinearPotentiometer</BlockGenusMember>
+				<BlockGenusMember>Tinker_RotaryPotentiometer</BlockGenusMember>
+				<BlockGenusMember>Tinker_Thermistor</BlockGenusMember>
+				<BlockGenusMember>Tinker_Touch</BlockGenusMember>
+				<BlockGenusMember>Tinker_Tilt</BlockGenusMember>
+				<BlockGenusMember>Tinker_Relay</BlockGenusMember>
+				<BlockGenusMember>Tinker_Mosfet</BlockGenusMember>
+				<BlockGenusMember>Tinker_Mosfet_pwm</BlockGenusMember>
+			</BlockDrawer><BlockDrawer button-color="195 38 50" name="bd.CAROBOT_SwissCHEESE" type="factory">
 				<BlockGenusMember>Carobot_LED</BlockGenusMember>
 				<BlockGenusMember>Carobot_LED_pwm</BlockGenusMember>
 				<BlockGenusMember>Carobot_Button</BlockGenusMember>
@@ -10922,6 +11519,399 @@
 				<BlockGenusMember>Carobot_MotorStop</BlockGenusMember>
 				
 			</BlockDrawer>
+			<BlockDrawer button-color="255 102 0" name="bd.dfrobot" type="factory">
+			    <BlockGenusMember>df_led</BlockGenusMember>
+				<BlockGenusMember>df_led_pwm</BlockGenusMember>
+				<BlockGenusMember>df_digital_push_button</BlockGenusMember>
+				<BlockGenusMember>df_digital_viberation_sensor</BlockGenusMember>
+				<BlockGenusMember>df_analog_rotation_sensor_v1</BlockGenusMember>
+				<BlockGenusMember>df_analog_rotation_sensor_v2</BlockGenusMember>
+				<BlockGenusMember>df_servo</BlockGenusMember>
+				<BlockGenusMember>df_360_degree_rotation_motor</BlockGenusMember>
+				<BlockGenusMember>df_analog_sound_sensor</BlockGenusMember>
+				<BlockGenusMember>df_analog_volume_sensor</BlockGenusMember>
+				<BlockGenusMember>df_relay</BlockGenusMember>
+				<BlockGenusMember>df_analog_ambient_light_sensor</BlockGenusMember>
+				<BlockGenusMember>df_analog_grayscale_sensor</BlockGenusMember>
+				<BlockGenusMember>df_buzzer</BlockGenusMember>
+				<BlockGenusMember>df_buzzer_tone</BlockGenusMember>
+				<BlockGenusMember>df_buzzer_tone_delay</BlockGenusMember>
+				<BlockGenusMember>df_capacitive_touch_sensor</BlockGenusMember>
+				<BlockGenusMember>df_digital_tilt_sensor</BlockGenusMember>
+				<BlockGenusMember>df_digital_infrared_motion_sensor</BlockGenusMember>
+				<BlockGenusMember>df_digital_ir_receiver_module</BlockGenusMember>
+				<BlockGenusMember>df_adjustable_infrared_sensor_switch</BlockGenusMember>
+				<BlockGenusMember>df_line_tracking_sensor</BlockGenusMember>
+				<BlockGenusMember>df_joystick_module_button</BlockGenusMember>
+				<BlockGenusMember>df_digital_magnetic_sensor</BlockGenusMember>
+				<BlockGenusMember>df_pizeo_disk_vibration_sensor</BlockGenusMember>
+				<BlockGenusMember>df_flame_sensor</BlockGenusMember>
+				<BlockGenusMember>df_temperature_sensor</BlockGenusMember>
+				<BlockGenusMember>df_joystick_module_x</BlockGenusMember>
+				<BlockGenusMember>df_joystick_module_y</BlockGenusMember>
+				<BlockGenusMember>df_analog_mma7361_x</BlockGenusMember>
+				<BlockGenusMember>df_analog_mma7361_y</BlockGenusMember>
+				<BlockGenusMember>df_analog_mma7361_z</BlockGenusMember>
+				<BlockGenusMember>df_mma7260_x</BlockGenusMember>
+				<BlockGenusMember>df_mma7260_y</BlockGenusMember>
+				<BlockGenusMember>df_mma7260_z</BlockGenusMember>
+				<BlockGenusMember>df_analog_gp2y0a21</BlockGenusMember>
+				<BlockGenusMember>df_analog_moisture</BlockGenusMember>
+				<BlockGenusMember>df_analog_gas_sensor</BlockGenusMember>
+				<BlockGenusMember>df_analog_co_sensor</BlockGenusMember>
+				<BlockGenusMember>df_analog_voltage_divider</BlockGenusMember>
+				<BlockGenusMember>df_piranha_led</BlockGenusMember>
+				<BlockGenusMember>df_piranha_led_pwm</BlockGenusMember>
+				<BlockGenusMember>panda_i1</BlockGenusMember>
+				<BlockGenusMember>panda_o1</BlockGenusMember>
+				<BlockGenusMember>df_lcd_keypad</BlockGenusMember>
+				<BlockGenusMember>bluno_println</BlockGenusMember>
+				<BlockGenusMember>bluno_println_number</BlockGenusMember>
+				<BlockGenusMember>bluno_println_clear</BlockGenusMember>
+				<BlockGenusMember>df_romeo_motors</BlockGenusMember>
+				<BlockGenusMember>df_romeo_motor</BlockGenusMember>
+				<BlockGenusMember>df_romeo_motor_stop</BlockGenusMember>
+			</BlockDrawer>
+			<BlockDrawer button-color="0 255 0" name="bd.seeedstudio">
+				<BlockGenusMember>seeed_led</BlockGenusMember>
+				<BlockGenusMember>seeed_button</BlockGenusMember>
+				<BlockGenusMember>seeed_switch</BlockGenusMember>
+				<BlockGenusMember>seeed_angle_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_light_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_temp_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_sound_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_line_finder</BlockGenusMember>
+				<BlockGenusMember>seeed_pir_motion_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_tilt_switch</BlockGenusMember>
+				<BlockGenusMember>seeed_water_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_moisture_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_touch_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_mag_switch</BlockGenusMember>
+				<BlockGenusMember>seeed_ir_dist_int</BlockGenusMember>
+				<BlockGenusMember>seeed_ir_proximity_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_air_quality_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_vib</BlockGenusMember>
+				<BlockGenusMember>seeed_vib_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_relay</BlockGenusMember>
+				<BlockGenusMember>seeed_dry_relay</BlockGenusMember>
+				<BlockGenusMember>seeed_2coil_relay</BlockGenusMember>
+				<BlockGenusMember>seeed_solid_relay</BlockGenusMember>
+				<BlockGenusMember>seeed_joystick</BlockGenusMember>
+				<BlockGenusMember>seeed_joystick_button</BlockGenusMember>
+				<BlockGenusMember>seeed_diff_amp</BlockGenusMember>
+				<BlockGenusMember>seeed_ir_temp_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_electricity_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_voltage_divider</BlockGenusMember>
+				<BlockGenusMember>seeed_flame_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_ir_refl_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_heart_rate_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_chest_heart_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_circle_led</BlockGenusMember>
+				<BlockGenusMember>seeed_led_strip</BlockGenusMember>
+				<BlockGenusMember>seeed_var_led</BlockGenusMember>
+				<BlockGenusMember>seeed_uv_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_single_gyro</BlockGenusMember>
+				<BlockGenusMember>seeed_mq9_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_mp3_sensor</BlockGenusMember>
+				<BlockGenusMember>seeed_o2_sensor</BlockGenusMember>
+			</BlockDrawer>
+			<BlockDrawer button-color="20 206 20" name="bd.DuinoEDU">
+				<BlockGenusMember>DuinoEDU_Led</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Servo_Plus</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Ultrasonic</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_LCD_I2C_RGB2</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_LCD_I2C_Backlight</BlockGenusMember>	
+				<BlockGenusMember>DuinoEDU_LCD_I2C_RGB_Clear</BlockGenusMember>	
+				<BlockGenusMember>DuinoEDU_infrared</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_infrared_compare</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_temp</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_humiPro</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Barometer_Pression</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Led_Bar</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Oled_I2C</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Oled_Clear</BlockGenusMember>	
+				<BlockGenusMember>DuinoEDU_Keypad_12_Button</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Keypad_Post</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Keypad_Pwd</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Digital_Tube</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Digital_Tube_Ecrire</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Display_Digital_Tube</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Digital_Clear</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Driver_I2C_Speed_A_Motor</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Driver_I2C_Forward</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Driver_I2C_Stop</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_shildbot_Speed_Motor</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_shildbot_Forward</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_shildbot_Stop</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_shildbot_Read</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Motor_shield_Speed_Motor</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Motor_shield_Forward</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Motor_shield_Stop</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Motor_shield_Drift_Motor</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Aix_Acc_mesurerX</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Partie_Emetteur</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Partie_Recepteur</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Rfid_Write</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Rfid_Test</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Rfid_Read</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Rfid_Clear</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_neopixel_init</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_neopixel_pixel_colorRGB</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_neopixel_show</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_neopixel_Brightness</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_neopixel_Clear</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_stepper_step</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_stepper_setSpeed</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_matrice_write</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_matrice_Brightness</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_matrice_clear</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_MP3_Player</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_MP3_Pause</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_RTC_Mem</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_RTC_Day</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Gps_Init</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Gps_Synchronise</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Gps_LatitudeNbr</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Gps_LatitudeGoogleMaps</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Gps_Day</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Gps_Speed</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Mouse_Xmove</BlockGenusMember>
+				<BlockGenusMember>keyboard_post</BlockGenusMember>
+				<BlockGenusMember>keyboard_compare</BlockGenusMember>
+				<BlockGenusMember>DuinoEDU_Nunchuck_BoutonC</BlockGenusMember>
+			</BlockDrawer>
+			<BlockDrawer button-color="20 206 20" name="bd.Esplora">
+			<BlockGenusMember>Esplora_Led</BlockGenusMember>
+			<BlockGenusMember>Esplora_tone</BlockGenusMember>
+			<BlockGenusMember>Esplora_notone</BlockGenusMember>
+			<BlockGenusMember>Esplora_Slider</BlockGenusMember>
+			<BlockGenusMember>Esplora_Microphone</BlockGenusMember>
+			<BlockGenusMember>Esplora_LightSensor</BlockGenusMember>
+			<BlockGenusMember>Esplora_Temp</BlockGenusMember>
+			<BlockGenusMember>Esplora_Switch</BlockGenusMember>
+			<BlockGenusMember>Esplora_JoystickSwitch2</BlockGenusMember>
+			<BlockGenusMember>Esplora_JoystickX</BlockGenusMember>
+			<BlockGenusMember>Esplora_JoystickSwitch</BlockGenusMember>
+			<BlockGenusMember>Esplora_AccelerationX</BlockGenusMember>
+			<BlockGenusMember>ESPLORA_INA</BlockGenusMember>
+			<BlockGenusMember>ESPLORA_OUTA</BlockGenusMember>
+			<BlockGenusMember>Esplora_Mouse_Click</BlockGenusMember>
+			<BlockGenusMember>Esplora_Mouse_isPressed</BlockGenusMember>
+			<BlockGenusMember>Esplora_Mouse_move</BlockGenusMember>
+			<BlockGenusMember>Esplora_Keyboard_Click</BlockGenusMember>
+			<BlockGenusMember>Esplora_Keyboard_ReleaseAll</BlockGenusMember>
+			<BlockGenusMember>Esplora_Keyboard_print</BlockGenusMember>
+			<BlockGenusMember>Esplora_TFT_Background</BlockGenusMember>
+			<BlockGenusMember>Esplora_TFT_Height</BlockGenusMember>
+			<BlockGenusMember>Esplora_TFT_Point</BlockGenusMember>
+			<BlockGenusMember>Esplora_TFT_Line</BlockGenusMember>
+			<BlockGenusMember>Esplora_TFT_Circle</BlockGenusMember>
+			<BlockGenusMember>Esplora_TFT_Rect</BlockGenusMember>
+			<BlockGenusMember>Esplora_TFT_Text</BlockGenusMember>
+			<BlockGenusMember>Esplora_Load_Image</BlockGenusMember>
+			<BlockGenusMember>variable_PImage</BlockGenusMember>
+			<BlockGenusMember>Esplora_Image_Width</BlockGenusMember>
+			<BlockGenusMember>Esplora_Image_isValid</BlockGenusMember>
+			<BlockGenusMember>Esplora_TFT_Display_Image</BlockGenusMember>
+			<BlockGenusMember>Espora_SD_Write</BlockGenusMember>
+			<BlockGenusMember>Espora_SD_Begin</BlockGenusMember>
+			<BlockGenusMember>Esplora_Setter_Variable_File</BlockGenusMember>
+			<BlockGenusMember>Esplora_Variable_File</BlockGenusMember>
+			<BlockGenusMember>Esplora_Variable_File_Bool</BlockGenusMember>
+			<BlockGenusMember>Esplora_File_Available</BlockGenusMember>
+			<BlockGenusMember>Esplora_File_Read</BlockGenusMember>
+			<BlockGenusMember>Esplora_File_Close</BlockGenusMember>
+			</BlockDrawer>
+			<BlockDrawer button-color="216 5 10" name="bd.adafruit" type="factory">
+				<BlockGenusMember>ada_dc_motor_fwd</BlockGenusMember>
+				<BlockGenusMember>ada_dc_motor_bwd</BlockGenusMember>
+				<BlockGenusMember>ada_dc_motor_release</BlockGenusMember>
+				<BlockGenusMember>ada_neopixel_init</BlockGenusMember>	
+				<BlockGenusMember>ada_neopixel_pixel_colorRGB</BlockGenusMember>
+				<BlockGenusMember>ada_neopixel_show</BlockGenusMember>	
+				<BlockGenusMember>ada_neopixel_Brightness</BlockGenusMember>
+			</BlockDrawer>
+			<BlockDrawer button-color="0 177 236" name="bd.makeblock" type="factory">
+				<BlockGenusMember>me_ultrasonic_sensor</BlockGenusMember>
+				<BlockGenusMember>me_linefinder</BlockGenusMember>
+				<BlockGenusMember>me_limitswitch</BlockGenusMember>
+				<BlockGenusMember>me_shutter</BlockGenusMember>
+				<BlockGenusMember>me_motordriver</BlockGenusMember>
+				<BlockGenusMember>me_servodriver</BlockGenusMember>
+				<BlockGenusMember>me_stepper_motor</BlockGenusMember>
+				<BlockGenusMember>me_infraredreceiver</BlockGenusMember>
+				<BlockGenusMember>me_bluetooth_read</BlockGenusMember>
+				<BlockGenusMember>me_bluetooth_write</BlockGenusMember>
+				<BlockGenusMember>me_bluetooth_commands</BlockGenusMember>
+				<BlockGenusMember>me_bluetooth_command</BlockGenusMember>
+				<BlockGenusMember>me_port_1</BlockGenusMember>
+				<BlockGenusMember>me_motor_1</BlockGenusMember>
+				<BlockGenusMember>me_shutter_1</BlockGenusMember>
+			</BlockDrawer>
+			<!-- 
+			<BlockDrawer button-color="225 116 116" name="bd.workshop" type="factory">
+			    <BlockGenusMember>ws_setting</BlockGenusMember>
+			    <BlockGenusMember>ws_go_forward</BlockGenusMember>
+				<BlockGenusMember>ws_go_backward</BlockGenusMember>
+				<BlockGenusMember>ws_stop</BlockGenusMember>
+				<BlockGenusMember>ws_turn_left</BlockGenusMember>
+				<BlockGenusMember>ws_turn_right</BlockGenusMember>
+				<BlockGenusMember>ws_go_forward_left</BlockGenusMember>
+				<BlockGenusMember>ws_go_forward_right</BlockGenusMember>
+				<BlockGenusMember>ws_go_backward_left</BlockGenusMember>
+				<BlockGenusMember>ws_go_backward_right</BlockGenusMember>
+				<BlockGenusMember>ws_light</BlockGenusMember>
+				<BlockGenusMember>ws_scan</BlockGenusMember>
+				<BlockGenusMember>ws_music</BlockGenusMember>
+				<BlockGenusMember>ws_wireless</BlockGenusMember>
+				<BlockGenusMember>ws_danger</BlockGenusMember>
+				<BlockGenusMember>ws_binoculars</BlockGenusMember>
+			</BlockDrawer>
+			 -->
+			<BlockDrawer button-color="64 109 0" name="bd.insectbot">
+			    <BlockGenusMember>insectbot_get_distance</BlockGenusMember>
+			    <BlockGenusMember>insectbot_is_indanger</BlockGenusMember>
+			    <BlockGenusMember>insectbot_go_forward</BlockGenusMember>
+			    <BlockGenusMember>insectbot_go_backright</BlockGenusMember>
+			    <BlockGenusMember>insectbot_turn_left</BlockGenusMember>
+			    <BlockGenusMember>insectbot_blink_led</BlockGenusMember>
+			</BlockDrawer>
+			<!-- iDrawing -->
+			<BlockDrawer button-color="255 102 0" name="bd.iDrawing">
+			    <BlockGenusMember>iDrawing_set_para</BlockGenusMember>
+			    <BlockGenusMember>iDrawing_run</BlockGenusMember>
+			    <BlockGenusMember>iDrawing_rule_start</BlockGenusMember>
+			    <BlockGenusMember>iDrawing_rule_stop</BlockGenusMember>
+			    <BlockGenusMember>iDrawing_rule_sleep</BlockGenusMember>
+			    
+			    <BlockGenusMember>iDrawing_trigger_time</BlockGenusMember>
+			    <BlockGenusMember>iDrawing_trigger_dpin</BlockGenusMember>
+			    <BlockGenusMember>iDrawing_trigger_apin</BlockGenusMember>
+			    
+			    <BlockGenusMember>iDrawing_actuator_led</BlockGenusMember>
+			    <BlockGenusMember>iDrawing_actuator_playermini</BlockGenusMember>
+			    <BlockGenusMember>iDrawing_actuator_dpin</BlockGenusMember>
+			    
+			    <BlockGenusMember>port_pin_name</BlockGenusMember>
+			    <BlockGenusMember>led_mode_flash</BlockGenusMember>
+			    <BlockGenusMember>led_mode_fade</BlockGenusMember>
+			    <BlockGenusMember>player_mode_random</BlockGenusMember>
+			    <BlockGenusMember>player_mode_single</BlockGenusMember>
+			    <BlockGenusMember>output_mode_high</BlockGenusMember>
+			    <BlockGenusMember>output_mode_low</BlockGenusMember>
+			    <BlockGenusMember>output_mode_highpulse</BlockGenusMember>
+			    <BlockGenusMember>output_mode_lowpulse</BlockGenusMember>
+			    <BlockGenusMember>trigger_equal</BlockGenusMember>
+			    <BlockGenusMember>trigger_greater</BlockGenusMember>
+			    <BlockGenusMember>trigger_less</BlockGenusMember>		    
+			</BlockDrawer>
+			<!-- littlebits -->
+			<BlockDrawer button-color="93 13 125" name="bd.littlebits">
+			    <BlockGenusMember>little_bits_bendsensor</BlockGenusMember>
+			    <BlockGenusMember>little_bits_button</BlockGenusMember>
+			    <BlockGenusMember>little_bits_dimmer</BlockGenusMember>
+			    <BlockGenusMember>little_bits_lightsensor</BlockGenusMember>
+			    <BlockGenusMember>little_bits_lighttrigger</BlockGenusMember>
+			    <BlockGenusMember>little_bits_microphone</BlockGenusMember>
+			    <BlockGenusMember>little_bits_motiontrigger</BlockGenusMember>
+			    <BlockGenusMember>little_bits_pressuresensor</BlockGenusMember>
+			    <BlockGenusMember>little_bits_pulse</BlockGenusMember>
+			    <BlockGenusMember>little_bits_remotetrigger</BlockGenusMember>
+			    <BlockGenusMember>little_bits_rollerswitch</BlockGenusMember>
+			    <BlockGenusMember>little_bits_slidedimmer</BlockGenusMember>
+			    <BlockGenusMember>little_bits_slideswitch</BlockGenusMember>
+			    <BlockGenusMember>little_bits_soundtrigger</BlockGenusMember>
+			    <BlockGenusMember>little_bits_timeout</BlockGenusMember>
+			    <BlockGenusMember>little_bits_toggleswitch</BlockGenusMember>
+			    <BlockGenusMember>little_bits_mix</BlockGenusMember>
+			    <BlockGenusMember>little_bits_oscillator</BlockGenusMember>
+			    <BlockGenusMember>little_bits_random</BlockGenusMember>
+			    <BlockGenusMember>little_bits_bargraph</BlockGenusMember>
+			    <BlockGenusMember>little_bits_brightled</BlockGenusMember>
+			    <BlockGenusMember>little_bits_dcmotor</BlockGenusMember>
+			    <BlockGenusMember>little_bits_fan</BlockGenusMember>
+			    <BlockGenusMember>little_bits_ir_led</BlockGenusMember>
+			    <BlockGenusMember>little_bits_led</BlockGenusMember>
+			    <BlockGenusMember>little_bits_lightwire</BlockGenusMember>
+			    <BlockGenusMember>little_bits_longled</BlockGenusMember>
+			    <BlockGenusMember>little_bits_number</BlockGenusMember>
+			    <BlockGenusMember>little_bits_rgbled</BlockGenusMember>
+			    <BlockGenusMember>little_bits_uvled</BlockGenusMember>
+			    <BlockGenusMember>little_bits_vibration_motor</BlockGenusMember>
+			    <BlockGenusMember>little_bits_synthspeaker</BlockGenusMember>
+			</BlockDrawer>
+			
+			<!-- keenlon -->			
+			<BlockDrawer button-color="20 150 30" name="bd.ke-keenlon">
+				<BlockGenusMember>ke-motor-run</BlockGenusMember>
+				<BlockGenusMember>ke-motor-setmoto</BlockGenusMember>	
+				<BlockGenusMember>ke-motor-stop</BlockGenusMember>				
+				<BlockGenusMember>ke-tft-print</BlockGenusMember>	
+				<BlockGenusMember>ke-tft-add</BlockGenusMember>
+				<BlockGenusMember>ke-tft-clear</BlockGenusMember>	
+				<BlockGenusMember>ke-eye-minvalue</BlockGenusMember>
+				<BlockGenusMember>ke-eye-minindex</BlockGenusMember>	
+				<BlockGenusMember>ke-eye-maxvalue</BlockGenusMember>				
+				<BlockGenusMember>ke-eye-maxindex</BlockGenusMember>					
+				<BlockGenusMember>ke-button-getbutton</BlockGenusMember>		
+				<BlockGenusMember>ke-encoder-clear</BlockGenusMember>
+				<BlockGenusMember>ke-encoder-getencoder</BlockGenusMember>	
+				<BlockGenusMember>ke-compass</BlockGenusMember>											
+				<BlockGenusMember>ke-buzzer</BlockGenusMember>
+				<BlockGenusMember>ke-relays</BlockGenusMember>				
+				<BlockGenusMember>ke-led-on-off</BlockGenusMember>
+				<BlockGenusMember>ke-led-pwm</BlockGenusMember>
+				<BlockGenusMember>ke-touch</BlockGenusMember>				
+				<BlockGenusMember>ke-ground-light</BlockGenusMember>				
+				<BlockGenusMember>ke-light</BlockGenusMember>
+				<BlockGenusMember>ke-photo</BlockGenusMember>
+				<BlockGenusMember>ke-potentiometer</BlockGenusMember>
+				<BlockGenusMember>ke-tempe</BlockGenusMember>	
+				<BlockGenusMember>ke-psd</BlockGenusMember>								
+				<BlockGenusMember>ke-servo</BlockGenusMember>																		
+			</BlockDrawer> 	
+
+			<BlockDrawer button-color="152 29 155" name="bd.jerusalab" type="factory">
+				<BlockGenusMember>midi_command</BlockGenusMember>
+				<!-- <BlockGenusMember>midi_note</BlockGenusMember> -->
+			</BlockDrawer>
+			<!--
+			<BlockDrawer button-color="135 206 235" name="bd.linksprite_LinkerKit">
+				<BlockGenusMember>ls_10mmLEDModule</BlockGenusMember>
+				<BlockGenusMember>ls_5mmLEDModule</BlockGenusMember>
+				<BlockGenusMember>ls_AccelerometerModule_x</BlockGenusMember>
+				<BlockGenusMember>ls_AccelerometerModule_y</BlockGenusMember>
+				<BlockGenusMember>ls_AccelerometerModule_z</BlockGenusMember>
+				<BlockGenusMember>ls_ButtonModule</BlockGenusMember>
+				<BlockGenusMember>ls_BuzzerModule</BlockGenusMember>
+				<BlockGenusMember>ls_HallSensor</BlockGenusMember>
+				<BlockGenusMember>ls_HighPowerLedModule</BlockGenusMember>
+				<BlockGenusMember>ls_JoystickSensorModule_x</BlockGenusMember>
+				<BlockGenusMember>ls_JoystickSensorModule_y</BlockGenusMember>
+				<BlockGenusMember>ls_LDRModule</BlockGenusMember>
+				<BlockGenusMember>ls_LEDBar</BlockGenusMember>
+				<BlockGenusMember>ls_Linear-SlidePotentiometerModule</BlockGenusMember>
+				<BlockGenusMember>ls_MagneticSwitch</BlockGenusMember>
+				<BlockGenusMember>ls_MosfetModule</BlockGenusMember>
+				<BlockGenusMember>ls_RelayModule</BlockGenusMember>
+				<BlockGenusMember>ls_RotaryPotentiometerModule</BlockGenusMember>
+				<BlockGenusMember>ls_RTCModule</BlockGenusMember>
+				<BlockGenusMember>ls_SoundSensor</BlockGenusMember>
+				<BlockGenusMember>ls_ThermalModule</BlockGenusMember>
+				<BlockGenusMember>ls_TiltModule</BlockGenusMember>
+				<BlockGenusMember>ls_TouchSensorModule</BlockGenusMember>
+			</BlockDrawer>
+			-->
+			<!--
+			<BlockDrawer button-color="0 255 0" name="XinChejian" type="factory">
+				<BlockGenusMember>xcj_motor_forward</BlockGenusMember>
+				<BlockGenusMember>xcj_motor_backward</BlockGenusMember> 
+				<BlockGenusMember>xcj_ms_digital_read</BlockGenusMember>
+				<BlockGenusMember>xcj_ms_digital_write</BlockGenusMember>
+			</BlockDrawer>
+			-->
+			<!-- Shapes are automatically loaded as blocks in the Shapes drawer (see slcodeblocks.ShapeBlocksGenerator for details) -->
+			<!-- Sound blocks reside in the auto-generated String drawer. (see slcodeblocks.SoundBlocksGenerator for details) -->
 		</BlockDrawerSet>
 	</BlockDrawerSets>
 
