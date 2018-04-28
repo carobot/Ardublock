@@ -1,0 +1,3 @@
+#! /bin/sh
+mvn install && \
+mv /Volumes/Data/Apps/Cardublock/Cardublock/target/cardublock_edu-all.jar /Volumes/'Macintosh HD'/Users/Mannix/Documents/Arduino/tools/ArduBlockTool/tool/
